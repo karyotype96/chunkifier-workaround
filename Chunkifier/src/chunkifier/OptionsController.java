@@ -7,20 +7,18 @@ package chunkifier;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 
 /**
+ * FXML Controller class
  *
  * @author seanc
  */
-public class FXMLDocumentController implements Initializable {
-    
-    @FXML
-    private Label TitleLabel;
-    
+public class OptionsController implements Initializable {
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
