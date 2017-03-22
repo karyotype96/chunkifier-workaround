@@ -11,6 +11,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import java.io.File;
 
 /**
  *
@@ -20,10 +24,37 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label TitleLabel;
+    @FXML
+    private TextField PathField;
+    @FXML
+    private Button Browse;
+    @FXML
+    private Button Chunkify;
+    @FXML
+    private Button ChunkifyAndSend;
+    @FXML
+    private Button ReceiveFiles;
+    @FXML
+    private Button Options;
+    
+    File toChunkify;
+    FileChooser chooser;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        chooser = new FileChooser();
+        chooser.setInitialDirectory(new File(System.getProperty("user.dir")));
+        chooser.setTitle("Find file to chunkify...");
+        
     }    
+    
+    @FXML
+    private void getFileLocation(){
+        toChunkify = chooser.showOpenDialog(TitleLabel.getScene().getWindow());
+        if (toChunkify != null){
+            PathField.setText(toChunkify.getAbsolutePath());
+        }
+    }
     
 }

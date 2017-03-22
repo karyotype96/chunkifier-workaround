@@ -16,6 +16,7 @@ import javafx.stage.Stage;
  * @author seanc
  */
 public class Chunkifier extends Application {
+   
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -24,6 +25,7 @@ public class Chunkifier extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+        stage.setTitle("Chunkifier");
         stage.show();
     }
 

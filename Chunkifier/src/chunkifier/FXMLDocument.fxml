@@ -16,11 +16,11 @@
       </font>
     </Label>
     <Separator layoutX="14.0" layoutY="62.0" prefWidth="472.0" />
-    <TextField layoutX="88.0" layoutY="149.0" mouseTransparent="false" prefHeight="35.0" prefWidth="206.0" promptText="File location..." />
-    <Button layoutX="310.0" layoutY="149.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="76.0" text="Browse" />
-    <Button layoutX="14.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Chunkify" />
-    <Button layoutX="136.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Chunkify &amp; Send" />
-    <Button layoutX="374.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Settings" />
-    <Button layoutX="254.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Receive Files" />
+    <TextField fx:id="PathField" layoutX="88.0" layoutY="149.0" mouseTransparent="false" prefHeight="35.0" prefWidth="206.0" promptText="File location..." />
+    <Button fx:id="Browse" layoutX="310.0" layoutY="149.0" mnemonicParsing="false" onAction="#getFileLocation" prefHeight="35.0" prefWidth="76.0" text="Browse" />
+    <Button fx:id="Chunkify" layoutX="14.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Chunkify" />
+    <Button fx:id="ChunkifyAndSend" layoutX="136.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Chunkify &amp; Send" />
+    <Button fx:id="Options" layoutX="374.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Options" />
+    <Button fx:id="ReceiveFiles" layoutX="254.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Receive Files" />
   </children>
 </AnchorPane>
