@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="350.0000999999975" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="chunkifier.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="407.0000999999975" prefWidth="626.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="chunkifier.FXMLDocumentController">
   <children>
     <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
     <Label fx:id="TitleLabel" layoutX="14.0" layoutY="14.0" prefWidth="262.0" text="Chunkifier">
@@ -15,12 +15,15 @@
         <Font size="36.0" />
       </font>
     </Label>
-    <Separator layoutX="14.0" layoutY="62.0" prefWidth="472.0" />
-    <TextField fx:id="PathField" layoutX="88.0" layoutY="149.0" mouseTransparent="false" prefHeight="35.0" prefWidth="206.0" promptText="File location..." />
-    <Button fx:id="Browse" layoutX="310.0" layoutY="149.0" mnemonicParsing="false" onAction="#getFileLocation" prefHeight="35.0" prefWidth="76.0" text="Browse" />
-    <Button fx:id="Chunkify" layoutX="14.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Chunkify" />
-    <Button fx:id="ChunkifyAndSend" layoutX="136.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Chunkify &amp; Send" />
-    <Button fx:id="Options" layoutX="374.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Options" />
-    <Button fx:id="ReceiveFiles" layoutX="254.0" layoutY="248.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Receive Files" />
+    <Separator layoutX="14.0" layoutY="62.0" prefWidth="598.0" />
+    <TextField id="PathField" fx:id="fromField" editable="false" layoutX="88.0" layoutY="93.0" mouseTransparent="false" prefHeight="35.0" prefWidth="358.0" promptText="File location..." />
+    <Button fx:id="Browse" layoutX="462.0" layoutY="93.0" mnemonicParsing="false" onAction="#getFileLocation" prefHeight="35.0" prefWidth="76.0" text="Browse" />
+    <Button fx:id="Chunkify" layoutX="14.0" layoutY="305.0" mnemonicParsing="false" onAction="#chunkify" prefHeight="88.0" prefWidth="112.0" text="Chunkify" />
+    <Button fx:id="ChunkifyAndSend" layoutX="135.0" layoutY="305.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Chunkify &amp; Send" />
+    <Button fx:id="Options" layoutX="500.0" layoutY="305.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Options" />
+    <Button fx:id="ReceiveFiles" layoutX="378.0" layoutY="305.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Receive Files" />
+    <TextField fx:id="toField" editable="false" layoutX="88.0" layoutY="136.0" prefHeight="35.0" prefWidth="358.0" promptText="Save at Location" />
+    <Button fx:id="SaveTo" layoutX="462.0" layoutY="136.0" mnemonicParsing="false" onAction="#getFileSaveLocation" prefHeight="35.0" prefWidth="76.0" text="Save to" />
+    <Button id="Options" layoutX="257.0" layoutY="305.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="112.0" text="Unchunkify" />
   </children>
 </AnchorPane>
